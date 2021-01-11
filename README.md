@@ -1,2 +1,2 @@
 # portfolio-grid-test
-Portfolio test using grid and scss
+This is a Portfolio test using html, css (including flex, grid and scss) and a small amount (hopefully will grow larger soon) of vanilla javascript.
