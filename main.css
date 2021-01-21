@@ -14,8 +14,8 @@ body {
   display: grid;
   -ms-grid-columns: (minmax(150px, auto))[auto];
       grid-template-columns: repeat(auto, minmax(150px, auto));
-  -ms-grid-rows: auto 100vh auto 100vh auto;
-      grid-template-rows: auto 100vh auto 100vh auto;
+  -ms-grid-rows: auto 100vh auto 90vh auto;
+      grid-template-rows: auto 100vh auto 90vh auto;
   grid-area: "navbar navbar navbar navbar" "banner banner banner banner" ". about about ." "projects projects projects projects" "footer footer footer footer";
 }
 
@@ -32,8 +32,6 @@ body {
   background-color: #333;
   color: white;
   grid-area: "navbar";
-  -webkit-transition: 0.5s all ease-in-out;
-  transition: 0.5s all ease-in-out;
 }
 
 .navbar-active {
@@ -141,6 +139,8 @@ body {
 
 .navbar-links li:hover {
   background-color: #555;
+  -webkit-transition: 0.5s ease all;
+  transition: 0.5s ease all;
 }
 
 .toggle-button {
@@ -227,6 +227,7 @@ h2.banner-text {
   border-radius: 999px;
   border: 1px solid black;
   font-size: larger;
+  cursor: pointer;
 }
 
 .btn:hover {
@@ -240,12 +241,34 @@ h2.banner-text {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.projects .material-icons.md-48 {
+  font-size: 48px;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  height: 90%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: .5s all ease;
+  transition: .5s all ease;
+}
+
+.projects .material-icons.md-48:hover {
+  background-color: white;
 }
 
 .projects .card-container {
@@ -256,9 +279,9 @@ h2.banner-text {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
@@ -274,7 +297,6 @@ h2.banner-text {
   text-align: center;
   -webkit-box-shadow: 5px 5px 5px black;
           box-shadow: 5px 5px 5px black;
-  cursor: pointer;
 }
 
 .projects .card-container #card img {
@@ -283,6 +305,8 @@ h2.banner-text {
   -o-object-fit: contain;
      object-fit: contain;
   border-bottom: 4px solid black;
+  -webkit-transition: .5s all ease;
+  transition: .5s all ease;
 }
 
 .projects .card-container #card p {
@@ -311,6 +335,8 @@ h2.banner-text {
 .footer-container a:hover {
   color: black;
   background-color: #999;
+  -webkit-transition: 0.5s ease all;
+  transition: 0.5s ease all;
 }
 
 @media (max-width: 700px) {

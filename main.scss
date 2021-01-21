@@ -11,7 +11,7 @@ body {
 .grid-container {
     display:grid;
     grid-template-columns: repeat(auto, minmax(150px, auto));
-    grid-template-rows: auto 100vh auto 100vh auto;
+    grid-template-rows: auto 100vh auto 90vh auto;
     grid-area: 
     "navbar navbar navbar navbar"
     "banner banner banner banner"
@@ -28,7 +28,7 @@ body {
     background-color: #333;
     color:white;
     grid-area: "navbar";
-    transition: 0.5s all ease-in-out;
+    
 }
 
 .navbar-active{
@@ -124,6 +124,7 @@ body {
 
 .navbar-links li:hover {
     background-color: #555;
+    transition: 0.5s ease all;
 }
 
 .toggle-button {
@@ -201,6 +202,7 @@ h2.banner-text {
     border-radius: 999px;
     border: 1px solid black; 
     font-size: larger;
+    cursor: pointer;
 }
 
 .btn:hover {
@@ -213,8 +215,24 @@ h2.banner-text {
     background-color: #444;
     color: black;
     display:flex;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
+
+    .material-icons.md-48 {  //these are the left and right icons for the card slideshow
+        font-size: 48px;
+        cursor: pointer;
+        user-select: none; 
+        height: 90%;
+        display:flex;
+        align-items: center;
+
+        transition: .5s all ease;
+        
+
+        &:hover{
+            background-color: white;
+        }
+    }
 
     .card-container{
         max-height: 80vh;
@@ -222,7 +240,7 @@ h2.banner-text {
         background-color: #999;
         border: 3px solid black;
         display:flex;
-        justify-content: center;
+        justify-content: space-between;
         align-items: flex-start; 
         margin: 0px 20px;       
 
@@ -234,7 +252,7 @@ h2.banner-text {
             background-color:white;
             text-align: center;
             box-shadow: 5px 5px 5px black;
-            cursor: pointer;
+            
             
 
             img{
@@ -242,6 +260,8 @@ h2.banner-text {
                 width: 100%;
                 object-fit: contain;
                 border-bottom: 4px solid black;
+
+                transition: .5s all ease;
                 
             }
 
@@ -271,6 +291,7 @@ h2.banner-text {
 .footer-container a:hover {
     color:black;
     background-color: #999;
+    transition: 0.5s ease all;
 }
 
 

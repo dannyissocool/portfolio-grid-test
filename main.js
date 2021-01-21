@@ -10,7 +10,7 @@ let images = ['img/selfie1.jpg',
              ];
 
 let imgStep = 0;
-galleryClick(); //set first image after page loads
+galleryAdd(); //set first image after page loads
 
 
 
@@ -45,7 +45,20 @@ function scrollEvent() {
     }
 }
 
-function galleryClick(){
+
+
+function gallerySubtract(){
+    if (typeof images == 'undefined')   
+    return;
+
+    else if( imgStep == -1 )
+    imgStep = 3;
+
+    document.getElementById('imgToChange').src = images[imgStep];
+    imgStep--;
+}
+
+function galleryAdd(){
     if (typeof images == 'undefined')   
     return;
 

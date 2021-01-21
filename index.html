@@ -4,7 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Meuse Portfolio</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"> 
     <link rel="stylesheet" href="main.css">
+    
     
 </head>
 <body>
@@ -51,12 +54,15 @@
 
         
         <section class="projects">
+            <i class="material-icons md-48" onclick="gallerySubtract()">chevron_left</i>
             <div class="card-container">
                 <div id="card" onclick="galleryClick()">
                     <img id="imgToChange" src="img/selfie1.jpg" alt="first-selfie">
                     <p class="card-description">Pics from a USA roadtrip across the country before/during the covid pandemic.</p>
                 </div>
             </div>
+            <i class="material-icons md-48" onclick="galleryAdd()">chevron_right</i>
+
         </section>
 
         <section class="footer">
